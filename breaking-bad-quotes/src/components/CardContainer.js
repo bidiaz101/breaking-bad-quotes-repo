@@ -1,8 +1,15 @@
 import React from "react"
+import {Container, Row, Col} from "react-bootstrap"
 
 function CardContainer({children}) {
     return (
-        <div>{children}</div>
+        <Container fluid>
+            <Row className="justify-content-md-center">
+                <Col>
+                    {children}
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
