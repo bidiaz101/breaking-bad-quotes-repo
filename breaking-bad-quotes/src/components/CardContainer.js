@@ -1,8 +1,8 @@
 import React from "react"
 
-function CardContainer() {
+function CardContainer({children}) {
     return (
-        <div>Cards</div>
+        <div>{children}</div>
     )
 }
 

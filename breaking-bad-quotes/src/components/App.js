@@ -1,6 +1,6 @@
 import '../App.css';
-import React from "react"
-import { Route, Switch} from "react-router-dom"
+import React, {useEffect, useState} from "react"
+import { Route, Switch, Link} from "react-router-dom"
 import Header from "./Header"
 import Navbar from "./Navbar"
 import Home from "./Home"
@@ -11,9 +11,19 @@ import Deaths from "./Deaths"
 import Favorites from "./Favorites"
 
 function App() {
+  const [characterData, setCharacterData] = useState([])
+
+  useEffect(() => {
+    fetch("https://breakingbadapi.com/api/characters")
+    .then(resp => resp.json())
+    .then(data => setCharacterData(data))
+  }, [])
+
   return (
     <div className="App">
-      <Header />
+      <Link to="/">
+        <Header />
+      </Link>
       <Navbar />
         <Switch>
           <Route path="/characters">
@@ -32,7 +42,7 @@ function App() {
             <Favorites />
           </Route>
           <Route exact path="/">
-            <Home />
+            <Home characterData={characterData} />
           </Route>
         </Switch>
     </div>
