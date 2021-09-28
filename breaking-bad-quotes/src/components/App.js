@@ -19,6 +19,14 @@ function App() {
     .then(data => setCharacterData(data))
   }, [])
 
+  const [quoteData, setQuoteData] = useState([])
+
+  useEffect(() => {
+      fetch("https://breakingbadapi.com/api/quotes")
+      .then(resp => resp.json())
+      .then(data => setQuoteData(data))
+  }, [])
+
   return (
     <div className="App">
       <Link to="/">
@@ -27,7 +35,7 @@ function App() {
       <Navbar />
         <Switch>
           <Route path="/characters">
-            <Characters />
+            <Characters characterData={characterData} quoteData={quoteData} />
           </Route>
           <Route path="/episodes">
             <Episodes />
@@ -42,7 +50,7 @@ function App() {
             <Favorites />
           </Route>
           <Route exact path="/">
-            <Home characterData={characterData} />
+            <Home characterData={characterData} quoteData={quoteData} />
           </Route>
         </Switch>
     </div>

@@ -15,8 +15,8 @@ function QuoteCard({quoteData, characterData}) {
     })
 
     return (
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={character.img} />
+        <Card style={{ width: '18rem', padding: "10px" }}>
+            <Card.Img variant="top" src={character ? character.img : "https://tse1.explicit.bing.net/th?id=OIP.w8iviKQzyNcBB0sjhAfVFAHaFy&pid=Api"} />
             <Card.Body>
                 <Card.Title>"{quote}"</Card.Title>
                 <Card.Text>- {author}</Card.Text>
