@@ -2,8 +2,14 @@ import React from "react"
 import QuoteCard from "./QuoteCard"
 import {Container, Row} from "react-bootstrap"
 
-function CardContainer({quoteData, characterData}) {
-    const quotesToDisplay = quoteData.map(quote => {
+function CardContainer({quoteData, characterData, selectedAuthor}) {
+    const quotesToDisplay = quoteData.filter(quote => {
+        if(selectedAuthor === "All") {
+            return true
+        } else if (quote.author === selectedAuthor) {
+            return quote
+        }
+    }).map(quote => {
         if(quote.series === "Breaking Bad") {
             return <QuoteCard quoteData={quote} characterData={characterData} key={quote.quote_id} />
         } 

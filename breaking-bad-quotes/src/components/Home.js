@@ -28,7 +28,7 @@ function Home({characterData, quoteData}) {
     })
 
     return (
-        <Carousel className="carousel">
+        <Carousel id="home-carousel">
             {carouselItems}
         </Carousel>
     )

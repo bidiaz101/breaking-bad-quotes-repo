@@ -40,9 +40,9 @@
   color: lightblue;
 }
 
-.carousel {
-  margin-left: 500px;
-  margin-right: 500px;
+#home-carousel{
+  margin-left: 400px;
+  margin-right: 400px;
 }
 
 .App-link {

@@ -14,11 +14,10 @@ function CharacterCard({character, quoteData}) {
     } = character
 
     const quoteLis = quoteData.filter(quoteObj => {
-        if((quoteObj.author === "Hank Schrader" && name === "Henry Schrader") ||(quoteObj.author === "Gus Fring" && name === "Gustavo Fring")) return quoteObj
-        if(quoteObj.author === name) return quoteObj
+        if((quoteObj.author === "Hank Schrader" && name === "Henry Schrader") ||(quoteObj.author === "Gus Fring" && name === "Gustavo Fring") || (quoteObj.author === name)) return quoteObj
     }).map(quoteObj => <li key={quoteObj.quote}>"{quoteObj.quote}"</li>)
 
-    const jobLis = occupation.length > 1 ? occupation.map(job => <li key={job}>{job}</li>) : occupation.map(job => <p>{job}</p>)
+    const jobLis = occupation.length > 1 ? occupation.map(job => <li key={job}>{job}</li>) : occupation.map(job => <p key={job}>{job}</p>)
 
     return (
         <Card style={{ width: '18rem' }}>

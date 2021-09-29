@@ -13,19 +13,16 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
   const [characterData, setCharacterData] = useState([])
+  const [quoteData, setQuoteData] = useState([])
 
   useEffect(() => {
     fetch("https://breakingbadapi.com/api/characters")
     .then(resp => resp.json())
     .then(data => setCharacterData(data))
-  }, [])
-
-  const [quoteData, setQuoteData] = useState([])
-
-  useEffect(() => {
-      fetch("https://breakingbadapi.com/api/quotes")
-      .then(resp => resp.json())
-      .then(data => setQuoteData(data))
+    
+    fetch("https://breakingbadapi.com/api/quotes")
+    .then(resp => resp.json())
+    .then(data => setQuoteData(data))
   }, [])
 
   return (
