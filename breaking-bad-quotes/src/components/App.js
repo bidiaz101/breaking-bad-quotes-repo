@@ -41,7 +41,7 @@ function App() {
             <Episodes characterData={characterData} />
           </Route>
           <Route path="/quotes">
-            <Quotes />
+            <Quotes characterData={characterData} quoteData={quoteData} />
           </Route>
           <Route path="/deaths">
             <Deaths />
