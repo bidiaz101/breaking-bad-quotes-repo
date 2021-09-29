@@ -9,6 +9,7 @@ import Episodes from "./Episodes"
 import Quotes from "./Quotes"
 import Deaths from "./Deaths"
 import Favorites from "./Favorites"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
   const [characterData, setCharacterData] = useState([])

@@ -16,10 +16,9 @@ function Home({characterData, quoteData}) {
             return (
                 <Carousel.Item interval={3000} key={quote.quote_id}>
                     <img
-                    className="d-block w-100"
-                    src={characterObj.img}
-                    alt={quote.author}
-                    style={{padding: "10px"}}
+                        className="d-block w-100"
+                        src={characterObj.img}
+                        alt={quote.author}
                     />
                     <Carousel.Caption>
                     <h3>"{quote.quote}"</h3>
@@ -31,7 +30,7 @@ function Home({characterData, quoteData}) {
     })
 
     return (
-        <Carousel>
+        <Carousel className="carousel">
             {carouselItems}
         </Carousel>
     )

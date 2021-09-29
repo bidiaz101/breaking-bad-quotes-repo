@@ -1,5 +1,5 @@
 import React from "react"
-import { Card, Carousel, Spinner } from "react-bootstrap"
+import { Card, Carousel } from "react-bootstrap"
 
 function EpisodeCard({chosenEpisode, characterData}) {
     const {air_date, characters, episode, season, title} = chosenEpisode

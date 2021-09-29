@@ -1,6 +1,5 @@
 import React from "react"
 import { Card, Spinner } from "react-bootstrap"
-import "bootstrap/dist/css/bootstrap.min.css"
 
 function QuoteCard({quoteData, characterData}) {
     const {quote, author} = quoteData
