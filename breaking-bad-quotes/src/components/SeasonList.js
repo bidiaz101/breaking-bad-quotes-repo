@@ -2,45 +2,22 @@ import React from "react"
 import { Accordion, ListGroup } from "react-bootstrap"
 
 function SeasonList({ episodeData, setChosenEpisode }){
-    const season1 = episodeData.filter(episode => episode.season === "1").map(episode => {
+    function makeEpisodeList(episode){
         return (
             <ListGroup.Item key={episode.episode_id} onClick={() => setChosenEpisode(episode)}>
                 Episode {episode.episode}: {episode.title}
             </ListGroup.Item>
         )
-    })
+    }
+    const season1 = episodeData.filter(episode => episode.season === "1").map(episode => makeEpisodeList(episode))
 
-    const season2 = episodeData.filter(episode => episode.season === "2").map(episode => {
-        return (
-            <ListGroup.Item key={episode.episode_id} onClick={() => setChosenEpisode(episode)}>
-                Episode {episode.episode}: {episode.title}
-            </ListGroup.Item>
-        )
-    })
+    const season2 = episodeData.filter(episode => episode.season === "2").map(episode => makeEpisodeList(episode))
 
-    const season3 = episodeData.filter(episode => episode.season === "3").map(episode => {
-        return (
-            <ListGroup.Item key={episode.episode_id} onClick={() => setChosenEpisode(episode)}>
-                Episode {episode.episode}: {episode.title}
-            </ListGroup.Item>
-        )
-    })
+    const season3 = episodeData.filter(episode => episode.season === "3").map(episode => makeEpisodeList(episode))
 
-    const season4 = episodeData.filter(episode => episode.season === "4").map(episode => {
-        return (
-            <ListGroup.Item key={episode.episode_id} onClick={() => setChosenEpisode(episode)}>
-                Episode {episode.episode}: {episode.title}
-            </ListGroup.Item>
-        )
-    })
+    const season4 = episodeData.filter(episode => episode.season === "4").map(episode => makeEpisodeList(episode))
 
-    const season5 = episodeData.filter(episode => episode.season === "5").map(episode => {
-        return (
-            <ListGroup.Item key={episode.episode_id} onClick={() => setChosenEpisode(episode)}>
-                Episode {episode.episode}: {episode.title}
-            </ListGroup.Item>
-        )
-    })
+    const season5 = episodeData.filter(episode => episode.season === "5").map(episode => makeEpisodeList(episode))
 
     return (
         <Accordion>
