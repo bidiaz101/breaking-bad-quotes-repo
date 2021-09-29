@@ -17,7 +17,7 @@ function CharacterCard({character, quoteData}) {
         if(quoteObj.author === "Hank Schrader" && name === "Henry Schrader") return quoteObj
         if(quoteObj.author === "Gus Fring" && name === "Gustavo Fring") return quoteObj
         if(quoteObj.author === name) return quoteObj
-    }).map(quoteObj => <li>"{quoteObj.quote}"</li>)
+    }).map(quoteObj => <li key={quoteObj.quote}>"{quoteObj.quote}"</li>)
 
     const jobLis = occupation.length > 1 ? occupation.map(job => <li key={job}>{job}</li>) : occupation.map(job => <p>{job}</p>)
 

@@ -19,9 +19,7 @@ function QuoteCard({quoteData, characterData}) {
             {character ? (
                 <Card.Img variant="top" src={character.img} />
                 ) : (
-                <Spinner animation="border" role="status">
-                    
-                </Spinner>
+                <Spinner animation="border" role="status"></Spinner>
             )}
             <Card.Body>
                 <Card.Title>"{quote}"</Card.Title>
