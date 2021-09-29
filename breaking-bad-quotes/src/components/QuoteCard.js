@@ -1,5 +1,5 @@
 import React from "react"
-import { Card } from "react-bootstrap"
+import { Card, Spinner } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 function QuoteCard({quoteData, characterData}) {
@@ -16,7 +16,13 @@ function QuoteCard({quoteData, characterData}) {
 
     return (
         <Card style={{ width: '18rem', padding: "10px" }}>
-            <Card.Img variant="top" src={character ? character.img : "https://tse1.explicit.bing.net/th?id=OIP.w8iviKQzyNcBB0sjhAfVFAHaFy&pid=Api"} />
+            {character ? (
+                <Card.Img variant="top" src={character.img} />
+                ) : (
+                <Spinner animation="border" role="status">
+                    
+                </Spinner>
+            )}
             <Card.Body>
                 <Card.Title>"{quote}"</Card.Title>
                 <Card.Text>- {author}</Card.Text>
@@ -24,7 +30,5 @@ function QuoteCard({quoteData, characterData}) {
         </Card>
     )
 }
-
-//"https://tse1.explicit.bing.net/th?id=OIP.w8iviKQzyNcBB0sjhAfVFAHaFy&pid=Api" surpised pika
 
 export default QuoteCard

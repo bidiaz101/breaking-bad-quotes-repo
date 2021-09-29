@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import SeasonList from "./SeasonList"
+import EpisodeCard from "./EpisodeCard"
 
 function Episodes() {
     const [episodeData, setEpisodeData] = useState([])
@@ -22,7 +23,7 @@ function Episodes() {
                         <SeasonList episodeData={episodeData} setChosenEpisode={setChosenEpisode}/>
                     </Col>
                     <Col sm={8}>
-                        {chosenEpisode ? null : <h3>Choose an Episode</h3>}
+                        {chosenEpisode ? <EpisodeCard chosenEpisode={chosenEpisode} />: <h3>Choose an Episode</h3>}
                     </Col>
                 </Row>
             </Container>
