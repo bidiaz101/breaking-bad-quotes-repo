@@ -42,7 +42,7 @@ function App() {
             <Quotes characterData={characterData} quoteData={quoteData} />
           </Route>
           <Route path="/deaths">
-            <Deaths />
+            <Deaths characterData={characterData} />
           </Route>
           <Route path="/favorites">
             <Favorites />

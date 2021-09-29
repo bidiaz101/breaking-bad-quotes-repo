@@ -9,10 +9,10 @@ function Home({characterData, quoteData}) {
             }
             return character.name === quote.author
         })
-
+        
         if(quote.series === "Breaking Bad") {
             return (
-                <Carousel.Item interval={3000} key={quote.quote_id}>
+                <Carousel.Item interval={2000} key={quote.quote_id}>
                     <img
                         className="d-block w-100"
                         src={characterObj.img}
