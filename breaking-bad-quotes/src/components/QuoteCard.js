@@ -6,9 +6,7 @@ function QuoteCard({quoteData, characterData}) {
     const {quote, author} = quoteData
 
     const character = characterData.find(character => {
-        if(character.name === "Henry Schrader" && author === "Hank Schrader") {
-            return character
-        }else if(character.name === "Gustavo Fring" && author === "Gus Fring") {
+        if((character.name === "Henry Schrader" && author === "Hank Schrader") || (character.name === "Gustavo Fring" && author === "Gus Fring")) {
             return character
         }
         return character.name === author

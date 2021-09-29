@@ -4,7 +4,7 @@ import CardContainer from "./CardContainer"
 function Quotes({characterData, quoteData}) {
     return (
         <div>
-            <h1>All Quotes</h1>
+            <h2>All Quotes</h2>
             <CardContainer characterData={characterData} quoteData={quoteData} />
         </div>
     )

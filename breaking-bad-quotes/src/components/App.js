@@ -1,6 +1,6 @@
 import '../App.css';
-import React, {useEffect, useState} from "react"
-import { Route, Switch, Link} from "react-router-dom"
+import React, { useEffect, useState } from "react"
+import { Route, Switch, Link } from "react-router-dom"
 import Header from "./Header"
 import Navbar from "./Navbar"
 import Home from "./Home"

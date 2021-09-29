@@ -44,11 +44,7 @@ function EpisodeCard({chosenEpisode, characterData}) {
                 <hr />
                 <Card.Text>Characters Featured: </Card.Text>
                 <Carousel>
-                    {carouselItems ? carouselItems : (
-                        <Spinner animation="border" role="status">
-                            <span className="visually-hidden">Loading...</span>
-                        </Spinner>
-                    )}
+                    {carouselItems}
                 </Carousel>
                 <Card.Footer>
                     Aired on: {air_date}
