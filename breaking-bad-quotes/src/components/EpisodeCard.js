@@ -13,9 +13,7 @@ function EpisodeCard({chosenEpisode, characterData}) {
             }
         }
         return characterData.find(character => {
-            if((featCharacter === "Hank Schrader" && character.name === "Henry Schrader") || (featCharacter === "Krazy-8" && character.name === "Domingo Molina") || (featCharacter === "Ted Beneke" && character.name === "Theodore Beneke") || (featCharacter === "Badger" && character.name === "Brandon Mayhew") || (featCharacter === "Ken Wins" && character.name === "Ken") || ((featCharacter === "Elliott Schwarts" || featCharacter === "Eliott Schwartz") && character.name === "Elliot Schwartz") || (featCharacter === "Gretchen Swartz" && character.name === "Gretchen Schwartz") || (featCharacter === "Combo" && character.name === "Christian Ortgea") || (featCharacter === "The cousins" && character.name === "Marco & Leonel Salamanca")){ 
-                return character
-            } else if (character.name === featCharacter) {
+            if((featCharacter === "Hank Schrader" && character.name === "Henry Schrader") || (featCharacter === "Krazy-8" && character.name === "Domingo Molina") || (featCharacter === "Ted Beneke" && character.name === "Theodore Beneke") || (featCharacter === "Badger" && character.name === "Brandon Mayhew") || (featCharacter === "Ken Wins" && character.name === "Ken") || ((featCharacter === "Elliott Schwarts" || featCharacter === "Eliott Schwartz") && character.name === "Elliot Schwartz") || (featCharacter === "Gretchen Swartz" && character.name === "Gretchen Schwartz") || (featCharacter === "Combo" && character.name === "Christian Ortgea") || (featCharacter === "The cousins" && character.name === "Marco & Leonel Salamanca") || (character.name === featCharacter)){ 
                 return character
             }
         })

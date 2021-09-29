@@ -1,9 +1,7 @@
 import React from "react"
-import { Carousel, Card } from "react-bootstrap"
+import { Carousel } from "react-bootstrap"
 
 function Home({characterData, quoteData}) {
-    console.log(quoteData)
-
     const carouselItems = quoteData.map(quote => {
         const characterObj = characterData.find(character => {
             if((character.name === "Henry Schrader" && quote.author === "Hank Schrader") || (character.name === "Gustavo Fring" && quote.author === "Gus Fring")) {

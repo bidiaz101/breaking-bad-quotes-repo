@@ -14,8 +14,7 @@ function CharacterCard({character, quoteData}) {
     } = character
 
     const quoteLis = quoteData.filter(quoteObj => {
-        if(quoteObj.author === "Hank Schrader" && name === "Henry Schrader") return quoteObj
-        if(quoteObj.author === "Gus Fring" && name === "Gustavo Fring") return quoteObj
+        if((quoteObj.author === "Hank Schrader" && name === "Henry Schrader") ||(quoteObj.author === "Gus Fring" && name === "Gustavo Fring")) return quoteObj
         if(quoteObj.author === name) return quoteObj
     }).map(quoteObj => <li key={quoteObj.quote}>"{quoteObj.quote}"</li>)
 

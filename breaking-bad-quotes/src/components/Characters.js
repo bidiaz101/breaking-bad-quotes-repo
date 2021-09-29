@@ -16,7 +16,7 @@ function Characters({characterData, quoteData}) {
         if(search === "") return true 
 
         return character.name.toLowerCase().includes(search.toLowerCase())
-    }).map(character => {
+    }).filter(character => character.category === "Breaking Bad").map(character => {
         return (
             <ListGroup.Item onClick={() => handleClick(character.name)} key={character.char_id}>{character.name}</ListGroup.Item>
         )
