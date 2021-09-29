@@ -10,14 +10,16 @@ function Deaths({ characterData }) {
         .then(data => setDeathData(data))
     }, [])
 
-    const accordionOfDeath = deathData.sort((death1, death2) => death1.episode - death2.episode).sort((death1, death2) => death1.season - death2.season).map(death => {
+    const accordionOfDeath = deathData.sort((death1, death2) => death1.episode - death2.episode)
+    .sort((death1, death2) => death1.season - death2.season)
+    .map(death => {
         const character = characterData.find(character => character.name === death.death)
 
         return (
             <Accordion.Item key={death.death_id} eventKey={death.death_id}>
                 <Accordion.Header>{death.death}</Accordion.Header>
                 <Accordion.Body>
-                    {character ? <img src={character.img} alt={character.name} /> : null}
+                    {character ? <img className="imgOfTheFallen" src={character.img} alt={character.name} /> : null}
                     <p>Occured in: Season {death.season}, Episode {death.episode}</p>
                     <p>Cause of Death: {death.cause}</p>
                     <p>Last Words: {death.last_words}</p>
@@ -31,6 +33,7 @@ function Deaths({ characterData }) {
     return (
         <>
             <h2>Deaths</h2>
+            <p><strong>Warning: </strong>Strong language and gruesome details lie below</p>
             <Accordion>
                 {accordionOfDeath}
             </Accordion>

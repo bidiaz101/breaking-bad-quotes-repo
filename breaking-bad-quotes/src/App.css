@@ -45,6 +45,11 @@
   margin-right: 35%;
 }
 
+.imgOfTheFallen{
+  border: 10px solid black;
+  max-width: 30%;
+}
+
 .App-link {
   color: #61dafb;
 }
