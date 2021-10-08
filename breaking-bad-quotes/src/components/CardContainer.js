@@ -11,7 +11,11 @@ function CardContainer({quoteData, characterData, selectedAuthor}) {
         }
     }).map(quote => {
         if(quote.series === "Breaking Bad") {
-            return <QuoteCard quoteData={quote} characterData={characterData} key={quote.quote_id} />
+            return <QuoteCard 
+                quoteData={quote} 
+                characterData={characterData} 
+                key={quote.quote_id}
+            />
         } 
     })
 

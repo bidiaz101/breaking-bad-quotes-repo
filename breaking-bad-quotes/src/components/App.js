@@ -45,10 +45,13 @@ function App() {
             <Deaths characterData={characterData} />
           </Route>
           <Route path="/favorites">
-            <Favorites />
+            <Favorites characterData={characterData} />
           </Route>
           <Route exact path="/">
             <Home characterData={characterData} quoteData={quoteData} />
+          </Route>
+          <Route>
+            <h1>404 page not found</h1>
           </Route>
         </Switch>
     </div>

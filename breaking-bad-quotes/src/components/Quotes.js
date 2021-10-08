@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import CardContainer from "./CardContainer"
 
-function Quotes({characterData, quoteData}) {
+function Quotes({characterData, quoteData, deletedQuote, setDeletedQuote}) {
     const [ selectedAuthor, setAuthor ] = useState("All") 
 
     const authorArr = ["All", "Walter White", "Jesse Pinkman", "Skyler White", "Saul Goodman", "Hank Schrader", "Mike Ehrmantraut", "Gus Fring", "Hector Salamanca"]
@@ -20,7 +20,13 @@ function Quotes({characterData, quoteData}) {
                     {authorOptions}
                 </select>
             </form>
-            <CardContainer characterData={characterData} quoteData={quoteData} selectedAuthor={selectedAuthor} />
+            <CardContainer 
+                characterData={characterData} 
+                quoteData={quoteData} 
+                selectedAuthor={selectedAuthor} 
+                deletedQuote={deletedQuote}
+                setDeletedQuote={setDeletedQuote} 
+            />
         </div>
     )
 }
