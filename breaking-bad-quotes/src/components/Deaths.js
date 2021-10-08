@@ -36,7 +36,7 @@ function Deaths({ characterData }) {
         <>
             <h2>Deaths</h2>
             <p><strong>Warning: </strong>Strong language and gruesome details lie below</p>
-            <form>
+            <form onSubmit={(e) => e.preventDefault()}>
                 <label>Search by Victim: </label>
                 <br />
                 <input type="text" placeholder="Search" onChange={(e) => setSearch(e.target.value)}></input>

@@ -28,7 +28,7 @@ function Characters({characterData, quoteData}) {
             <Container>
                 <Row>
                     <Col sm={4}>
-                    <form>
+                    <form onSubmit={(e) => e.preventDefault()}>
                         <label>Search:</label>
                         <br />
                         <input type="text"  name="character" placeholder="Search Characters" onChange={(e) => setSearch(e.target.value)} />
