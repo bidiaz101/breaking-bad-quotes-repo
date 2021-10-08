@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Accordion, Container } from "react-bootstrap"
+import { Accordion } from "react-bootstrap"
 
 function Deaths({ characterData }) {
     const [deathData, setDeathData] = useState([])

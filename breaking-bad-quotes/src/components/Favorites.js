@@ -19,7 +19,7 @@ function Favorites({ characterData }) {
     }
 
     const faveQuotes = favorites.map(faveQuote => {
-        return <QuoteCard quoteData={faveQuote} characterData={characterData} key={faveQuote.quote_id} fave={true} handleDelete={handleDelete} key={faveQuote.id} id={faveQuote.id} />
+        return <QuoteCard quoteData={faveQuote} characterData={characterData} key={faveQuote.quote_id} fave={true} handleDelete={handleDelete} id={faveQuote.id} />
     })
 
     return (
