@@ -39,7 +39,7 @@ function QuoteCard({quoteData, characterData, fave = false, handleDelete, id}) {
                 <Card.Title>"{quote}"</Card.Title>
                 <Card.Text>- {author}</Card.Text>
             </Card.Body>
-            <Button onClick={!fave ? handleFavorite : () => handleDelete(id)}>{fave? "Remove from Favorites" : "Add to Favorites"}</Button>
+            <Button onClick={fave ? () => handleDelete(id) : handleFavorite}>{fave? "Remove from Favorites" : "Add to Favorites"}</Button>
             {addedFavorite ? (
                 <Alert variant="success">
                     Added to <Alert.Link href="/favorites">Favorites</Alert.Link>!

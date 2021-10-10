@@ -1,39 +1,19 @@
 {
   "quotes": [
     {
-      "quote": "I am not in danger, Skyler. I am the danger!",
-      "author": "Walter White",
-      "id": 1
-    },
-    {
-      "quote": "Yeah, you do seem to have a little s*** creek action going... You know, FYI, you can buy a paddle.",
-      "author": "Saul Goodman",
-      "id": 7
-    },
-    {
-      "quote": "Everyone sounds like Meryl Streep with a gun to their head.",
-      "author": "Mike Ehrmantraut",
-      "id": 76
-    },
-    {
       "quote": "Jesus Christ, Marie. They're minerals!",
       "author": "Hank Schrader",
       "id": 24
     },
     {
-      "quote": "Tread lightly.",
+      "quote": "Stay out of my territory.",
       "author": "Walter White",
-      "id": 8
+      "id": 2
     },
     {
       "quote": "Funyuns are awesome.",
       "author": "Jesse Pinkman",
       "id": 9
-    },
-    {
-      "quote": "My name is Skyler White, yo.",
-      "author": "Skyler White",
-      "id": 25
     }
   ]
 }
