@@ -14,7 +14,7 @@ function QuoteCard({quoteData, characterData, fave = false, handleDelete, id}) {
     })
 
     function handleFavorite(){
-        fetch("http://localhost:3000/quotes", {
+        fetch(`${process.env.REACT_APP_API_URL}/quotes`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

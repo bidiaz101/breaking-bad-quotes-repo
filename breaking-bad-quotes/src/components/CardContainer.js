@@ -1,6 +1,6 @@
 import React from "react"
 import QuoteCard from "./QuoteCard"
-import {Container, Row} from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
 
 function CardContainer({quoteData, characterData, selectedAuthor}) {
     const quotesToDisplay = quoteData.filter(quote => {

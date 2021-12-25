@@ -6,20 +6,20 @@ function Favorites({ characterData }) {
     const [favorites, setFavorites] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:3000/quotes")
+        fetch(`${process.env.REACT_APP_API_URL}/quotes`)
         .then(resp => resp.json())
         .then(data => setFavorites(data))
     }, [])
 
     function handleDelete(id) {
-        fetch(`http://localhost:3000/quotes/${id}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/quotes/${id}`, {
             method: "DELETE"
         })
         .then(setFavorites(favorites.filter(favorite => favorite.id !== id)))
     }
 
     const faveQuotes = favorites.map(faveQuote => {
-        return <QuoteCard quoteData={faveQuote} characterData={characterData} key={faveQuote.quote_id} fave={true} handleDelete={handleDelete} id={faveQuote.id} />
+        return <QuoteCard quoteData={faveQuote} characterData={characterData} fave={true} handleDelete={handleDelete} id={faveQuote.id} key={faveQuote.id} />
     })
 
     return (
