@@ -40,6 +40,8 @@ Users can browse all quotes or select a character from the dropdown list and fil
 
 All quotes that appear in the "Favorites" page will now have a "Remove" button. Once the user clicks one of these buttons the quote will disappear from the page. 
 
+The app is hosted on Heroku at https://diaz-breaking-bad.herokuapp.com/
+
 ### Upcoming Features
 
 - Replace JSON server will Rails backend
